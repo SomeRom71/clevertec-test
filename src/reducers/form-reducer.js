@@ -1,5 +1,7 @@
 const initialState = {
-  title: ''
+  title: '',
+  image: '',
+  fields: [],
 };
 
 export default function formReducer(state = initialState, action) {
