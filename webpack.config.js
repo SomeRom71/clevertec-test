@@ -34,9 +34,17 @@ module.exports = {
             {
                 test: /\.svg$/i,
                 use: [
-                  {loader: 'url-loader'},
+                    {loader: 'url-loader'},
                 ],
-              },
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [
+                  {
+                    loader: 'file-loader',
+                  },
+                ],
+            },
         ]
     },
 
@@ -63,7 +71,7 @@ module.exports = {
     ],
 
     resolve: {
-        extensions: [ '.js', '.jsx', '.scss', '.css', '.svg' ],
+        extensions: [ '.js', '.jsx', '.scss', '.css', '.svg', '.png' ],
     },
 
     optimization: {
